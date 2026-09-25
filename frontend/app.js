@@ -1,3 +1,4 @@
+const PROJECTS_API_URL = "http://localhost:8000/projects";
 const button = document.getElementById("load-projects-btn");
 const statusBox = document.getElementById("status-box");
 const projectList = document.getElementById("project-list");
@@ -5,7 +6,7 @@ async function loadProjects() {
  statusBox.textContent = "Carregando dados da API...";
  projectList.innerHTML = "";
  try {
- const response = await fetch("http://localhost:8000/projects");
+ const response = await fetch(PROJECTS_API_URL);
  const data = await response.json();
  const projects = data.projects;
  if (!projects || projects.length === 0) {
