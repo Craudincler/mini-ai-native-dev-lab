@@ -1,53 +1,117 @@
 :root {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    color: #1f2937;
-    background: #f3f6fb;
-   }
-   * {
-    box-sizing: border-box;
-   }
-   body {
-    margin: 0;
-   }
-   .container {
-    width: min(900px, 92%);
-    margin: 0 auto;
-   }
-   header,
-   footer {
-    padding: 24px 0;
-   }
-   h1,
-   h2 {
-    margin-top: 0;
-   }
-   .card {
-    background: white;
-    border: 1px solid #d8e1ee;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-   }
-   button {
-    border: none;
-    border-radius: 8px;
-    padding: 10px 16px;
-    background: #2563eb;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #1f2937;
+  background: #f3f6fb;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: min(900px, 92%);
+  margin: 0 auto;
+}
+
+header,
+footer {
+  padding: 24px 0;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.card {
+  background: white;
+  border: 1px solid #d8e1ee;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 button:hover {
- background: #1d4ed8;
+  background: #1d4ed8;
 }
+
+/* Formulário: um campo embaixo do outro */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #c7d2e3;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+form button {
+  margin-top: 12px;
+  align-self: flex-start;
+}
+
 #status-box {
- margin-bottom: 12px;
- padding: 12px;
- border-radius: 8px;
- background: #eef4ff;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: #eef4ff;
 }
+
 ul {
- padding-left: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Cada demanda em uma linha, com o botão Excluir à direita */
+#demand-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5eaf2;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  background: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
 }
